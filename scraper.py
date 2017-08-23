@@ -75,7 +75,7 @@ def job():
 
     # git add commit push
     git_add_commit_push(strdate, filename)
-
+    print('finish job in strdate')
 
 if __name__ == '__main__':
     while True:
