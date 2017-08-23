@@ -64,6 +64,7 @@ def job():
     # create markdown file
     createMarkdown(strdate, filename)
 
+    print('start scraping')
     # write markdown
     # today's trending
     scrape('', filename)
@@ -73,9 +74,10 @@ def job():
     scrape('java', filename)
     scrape('go', filename)
 
+    print('start git push')
     # git add commit push
     git_add_commit_push(strdate, filename)
-    print('finish job in strdate')
+    print('finish job in ' + strdate)
 
 if __name__ == '__main__':
     while True:
